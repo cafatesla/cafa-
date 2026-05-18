@@ -1,0 +1,172 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background: rgb(0, 0, 0);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+  padding: 10px;
+}
+
+/* TERMINAL */
+.terminal{
+  width: 95%;
+  max-width: 900px;
+  height: 90vh;
+  max-height: 550px;
+
+  background: #0a0a0a;
+  border: 2px solid #00ff88;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #00ff88;
+  overflow: hidden;
+
+  position: relative;
+}
+
+/* TOPBAR */
+.topbar{
+  height: 40px;
+  border-bottom: 1px solid #00ff88;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  gap: 10px;
+}
+
+/* BOTONES */
+.red,
+.yellow,
+.green{
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.red{
+  background: red;
+}
+
+.yellow{
+  background: yellow;
+}
+
+.green{
+  background: green;
+}
+
+/* CONTENIDO */
+.content{
+  color: #00ff88;
+  font-family: Consolas, monospace;
+  padding: 20px;
+  position: relative;
+  height: 100%;
+}
+
+/* LOGO */
+.logo{
+  position: absolute;
+  right: 20px;
+  top: 250px;
+
+  width: 20%;
+  max-width: 120px;
+  height: auto;
+}
+
+/* INPUT */
+.terminal-input{
+  width: 60%;
+  max-width: 400px;
+
+  padding: 10px;
+  margin-top: 30px;
+
+  background: black;
+  border: 1px solid #00ff88;
+  color: #00ff88;
+
+  outline: none;
+  font-family: Consolas, monospace;
+}
+
+/* BOTÓN */
+.boton{
+  padding: 10px 15px;
+  margin-left: 10px;
+
+  background: #00ff88;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* EFECTO SCANLINE */
+.scanline{
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 2px;
+
+  background: rgba(0, 255, 136, 0.3);
+  animation: scan 3s infinite linear;
+}
+
+@keyframes scan{
+  0%{
+    top: 0;
+  }
+
+  100%{
+    top: 100%;
+  }
+}
+
+/* SOPORTE.PNG */
+.tecnico{
+  position: absolute;
+
+  top: 600px;
+  right: 600px;
+
+  width: 140px;
+  max-width: 140px;
+  height: auto;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px){
+
+  .terminal{
+    height: 95vh;
+  }
+
+  .logo{
+    top: 180px;
+    max-width: 90px;
+  }
+
+  .tecnico{
+    top: 300px;
+    max-width: 100px;
+  }
+
+  .terminal-input{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .boton{
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+}
