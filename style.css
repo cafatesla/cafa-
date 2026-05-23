@@ -133,13 +133,9 @@ body{
 /* SOPORTE.PNG */
 .tecnico{
   position: absolute;
-
   top: 400px;
-  right: 600px;
+  right:560px;
 
-  width: 140px;
-  max-width: 140px;
-  height: auto;
 }
 
 /* RESPONSIVE */
